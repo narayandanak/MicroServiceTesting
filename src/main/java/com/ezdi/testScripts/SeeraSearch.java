@@ -44,10 +44,14 @@ public class SeeraSearch extends MyBaseTest {
 			 
 
 			Assert.assertEquals(utils.httpRequest.getStatusCode(), "200");
+			String expectedJSONString = utils.xlops.getCellValue(testMethodName, "responsePayload", "test_data");
+			expectedJSONString = expectedJSONString.replace("DateFrom", us.chekInDate).replace("DateTo", us.checkOutDate);
+			
 			JSONAssert.assertEquals(
-					new JSONObject(utils.xlops.getCellValue(testMethodName, "responsePayload", "test_data")),
+					new JSONObject(expectedJSONString),
 					new JSONObject(utils.httpRequest.getResponseBody()), JSONCompareMode.NON_EXTENSIBLE);
 
+			
 		} catch (Exception e) {
 			Logging.log.info("Error in TestMethod " + testMethodName + " " + MyBaseTest.getStaktrace(e));
 			Assert.fail();
@@ -105,8 +109,11 @@ public class SeeraSearch extends MyBaseTest {
 			 
 
 			Assert.assertEquals(utils.httpRequest.getStatusCode(), "200");
+			String expectedJSONString = utils.xlops.getCellValue(testMethodName, "responsePayload", "test_data");
+			expectedJSONString = expectedJSONString.replace("DateFrom", us.chekInDate).replace("DateTo", us.checkOutDate);
+			
 			JSONAssert.assertEquals(
-					new JSONObject(utils.xlops.getCellValue(testMethodName, "responsePayload", "test_data")),
+					new JSONObject(expectedJSONString),
 					new JSONObject(utils.httpRequest.getResponseBody()), JSONCompareMode.NON_EXTENSIBLE);
 
 		} catch (Exception e) {
@@ -133,8 +140,11 @@ public class SeeraSearch extends MyBaseTest {
 			 
 
 			Assert.assertEquals(utils.httpRequest.getStatusCode(), "200");
+			String expectedJSONString = utils.xlops.getCellValue(testMethodName, "responsePayload", "test_data");
+			expectedJSONString = expectedJSONString.replace("DateFrom", us.chekInDate).replace("DateTo", us.checkOutDate);
+			
 			JSONAssert.assertEquals(
-					new JSONObject(utils.xlops.getCellValue(testMethodName, "responsePayload", "test_data")),
+					new JSONObject(expectedJSONString),
 					new JSONObject(utils.httpRequest.getResponseBody()), JSONCompareMode.NON_EXTENSIBLE);
 
 		} catch (Exception e) {
@@ -161,8 +171,11 @@ public class SeeraSearch extends MyBaseTest {
 			 
 
 			Assert.assertEquals(utils.httpRequest.getStatusCode(), "200");
+			String expectedJSONString = utils.xlops.getCellValue(testMethodName, "responsePayload", "test_data");
+			expectedJSONString = expectedJSONString.replace("DateFrom", us.chekInDate).replace("DateTo", us.checkOutDate);
+			
 			JSONAssert.assertEquals(
-					new JSONObject(utils.xlops.getCellValue(testMethodName, "responsePayload", "test_data")),
+					new JSONObject(expectedJSONString),
 					new JSONObject(utils.httpRequest.getResponseBody()), JSONCompareMode.NON_EXTENSIBLE);
 
 		} catch (Exception e) {
@@ -188,8 +201,11 @@ public class SeeraSearch extends MyBaseTest {
 			 
 
 			Assert.assertEquals(utils.httpRequest.getStatusCode(), "200");
+			String expectedJSONString = utils.xlops.getCellValue(testMethodName, "responsePayload", "test_data");
+			expectedJSONString = expectedJSONString.replace("DateFrom", us.chekInDate).replace("DateTo", us.checkOutDate);
+			
 			JSONAssert.assertEquals(
-					new JSONObject(utils.xlops.getCellValue(testMethodName, "responsePayload", "test_data")),
+					new JSONObject(expectedJSONString),
 					new JSONObject(utils.httpRequest.getResponseBody()), JSONCompareMode.NON_EXTENSIBLE);
 
 		} catch (Exception e) {
